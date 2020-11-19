@@ -26,6 +26,9 @@ export function getDataFromDoc(doc, excepts = []) {
 export function saveCurrentUser(userData) {
     localStorage.setItem('current-user', JSON.stringify(userData));
 }
+export function deleteUser(){
+    localStorage.setItem('current-user', JSON.stringify());
+}
 
 export function getCurrentUser() {
     return JSON.parse(localStorage.getItem('current-user'));

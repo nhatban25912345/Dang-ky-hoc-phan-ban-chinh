@@ -10,6 +10,10 @@ let hash = '#'
 
 let router = new Navigo(root, useHash, hash);
 
+// đăng ký
+router.on('/sign-up', function () {
+    $app.innerHTML = `<form-register></form-register>`;
+}).resolve();
 // đăng nhập
 router.on('/sign-in', function () {
     $app.innerHTML = `<form-login></form-login>`;
@@ -22,7 +26,7 @@ router.on("/student-profile", async function () {
         .collection("users")
         .doc(currentUser.id)
         .get();
-    console.log(getDataFromDoc(result));
+    // console.log(getDataFromDoc(result));
 
     let studentProfileData = getDataFromDoc(result);
     $app.innerHTML = `<student-profile id="${studentProfileData.id}"></student-profile>`;
@@ -44,7 +48,9 @@ router.on("/object-list",async function(){
     let $objectList = document.createElement("object-list");
     $objectList.setAttribute("id",ObjectListData.id);
     $objectList.setObjects(ObjectListData.objects);
-    $app.appendChild($objectList);
+    // $app.appendChild($objectList);
+    app.innerHTML = `<object-list></object-list`;
+
 }).resolve();
 
 window.router = router;

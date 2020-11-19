@@ -33,19 +33,6 @@ export class ObjectList extends HTMLElement {
     this.render();
   }
 
-  //   update() {
-  //     let foundObject = this.objects.find(function (item) {
-  //       return item.id === object.id;
-  //     });
-
-  //     if (foundObject != null) {
-  //       foundObject.content = object.content;
-  //     }
-  //     firebase.firestore().collection("ObjectList").doc(this.id).update({
-  //       objects: this.objects,
-  //     });
-  //   }
-
   render() {
     console.log(this.id);
     this.$name.innerHTML = "Danh sach hoc phan" + this.id;
@@ -61,8 +48,7 @@ export class ObjectList extends HTMLElement {
                 number-tc="${object.numberTc}"
                 tuition="${object.tuition}">
             </object-container>`
-      })
-      .join("");
+      }).join("");
   }
 }
 

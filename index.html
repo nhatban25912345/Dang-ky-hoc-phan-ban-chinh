@@ -55,75 +55,39 @@
     <!-- Css  -->
 
     <link rel="stylesheet" href="./CSS/Main.css">
+    <link rel="stylesheet" href="./CSS/Navbar.css">
+
 
 </head>
 
 <!-- body  -->
 
 <body>
-    <!-- <div id="container">
+    <div id="container">
         <div class="head">
-            Navbar 
-            <main-navbar title1="Đăng ký học phần" title2="Thông tin học phần" title3="Thông tin tài khoản" title4=""
-                title5="">
-            </main-navbar>
+            <!-- Navbar  -->
+            <navbar>
+                <div class="navbar-container">
+                    <!-- <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt=""> -->
+                    <div id="title1">Đăng ký học phần</div>
+                    <div id="title2">Thông tin học phần</div>
+                    <div id="title3">Thông tin sinh viên</div>
+                    <div id="title4">Đăng ký</div>
+                    <div id="title5">Đăng nhập</div>
+                </div>
+            </navbar>
         </div>
         <div id="app">
-            <form-login></form-login>
+            <!-- <form-login></form-login> -->
         </div>
         <div class="footer">
-            <img id="imageFooter" src="./Image/banner_left.png" alt="">
+            <!-- <img id="imageFooter" src="./Image/banner_left.png" alt=""> -->
         </div>
-    </div> -->
-
-    <!-- <table class="table table-bordered table-hover" >
-        <thead class="bg-primary">
-           <tr>
-              <th>STT</th>
-              <th>Mã Học Phần</th>
-              <th>Tên Học Phần</th>
-              <th>Tên Giảng Viên</th>
-              <th>Lớp Học Phần</th>
-              <th>Số TC</th>
-              <th>Học Phí</th>
-           </tr>
-        </thead>
-        <tbody>
-           <tr>
-              <td>1</td>
-              <td>Java</td>
-              <td>14.21%</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-           </tr>
-           <tr>
-              <td>2</td>
-              <td>C</td>
-              <td>11.03%</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-           </tr>
-           <tr>
-            <td>3</td>
-            <td>C++</td>
-            <td>5.60%</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-         </tr>
-        </tbody>
-     </table> -->
+    </div>
 
     <div id="app">
-        change here !!!
         <!-- <object-list></object-list> -->
         <!-- <form-login></form-login> -->
-
     </div>
 
 </body>
@@ -136,7 +100,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
     <link rel="stylesheet" href=".">
     <div class="object-container">
-            <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0; padding:0 ;">
+            <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0 0 0 2%; padding:0 ;">
                 <tbody>
                     <tr>
                         <td width="5%" id="number">1</td>
@@ -161,7 +125,7 @@
         <h1>Thông tin học phần</h1>
         <h2 id="name"></h2>
 
-        <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0; padding:0 ;">
+        <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0 0 0 2%; padding:0 ;">
             <thead class="bg-primary">
                 <tr>
                     <th width="5%">STT</th>
@@ -170,7 +134,7 @@
                     <th width="20%">Tên Giảng Viên</th>
                     <th width="20%">Lớp Học Phần</th>
                     <th width="10%">Số TC</th>
-                    <th>Học Phí</th>
+                    <th>Học Phí (VND)</th>
                     <!-- <th>Đăng ký</th> -->
                 </tr>
             </thead>
@@ -183,18 +147,45 @@
     </div>
 </template>
 
+<template id="object-manager-template">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href=".">
+
+    <div class="object-list-container">
+        <h1>Thông tin học phần</h1>
+        <h2 id="name-manager"></h2>
+
+        <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0; padding:0 ;">
+            <thead class="bg-primary">
+                <tr>
+                    <th width="5%">STT</th>
+                    <th width="10%">Mã Học Phần</th>
+                    <th width="20%">Tên Học Phần</th>
+                    <th width="20%">Tên Giảng Viên</th>
+                    <th width="20%">Lớp Học Phần</th>
+                    <th width="10%">Số TC</th>
+                    <th>Học Phí(VND)</th>
+                    <!-- <th>Đăng ký</th> -->
+                </tr>
+            </thead>
+        </table>
+        <div id="object-manager-content">
+        </div>
+    </div>
+</template>
+
 <!-- navbar -->
-<template id="main-navbar">
-    <link rel="stylesheet" href="./CSS/Navbar.css">
+<!-- <template id="main-navbar">
     <div class="navbar-container">
-        <!-- <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt=""> -->
+        <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt="">
         <div id="title1">title1</div>
         <div id="title2">title2</div>
         <div id="title3">title3</div>
         <div id="title4">title4</div>
         <div id="title5">title5</div>
     </div>
-</template>
+</template> -->
 <!-- student-profile -->
 <template id="student-profile-template">
     <link rel="stylesheet" href="./CSS/StudentProfile.css">

@@ -71,12 +71,6 @@ class FormRegister extends HTMLElement {
                 } else {
                     alert('email này đã được đăng ký!');
                 }
-
-                // firebase.firestore().collection('users').add({
-                //     name: name,
-                //     email: email,
-                //     password: password
-                // })
             }
 
         }
