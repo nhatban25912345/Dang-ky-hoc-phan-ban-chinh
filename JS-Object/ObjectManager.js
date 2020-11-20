@@ -40,7 +40,7 @@ export class ObjectManager extends HTMLElement {
       this.$objectManagerContent.innerHTML = this.Objects.map(function(object) {
         number++;
           return `
-              <object-container 
+              <object-register 
                   number="${number}"
                   object-id="${object.objectId}"
                   object-name="${object.objectName}"
@@ -48,7 +48,7 @@ export class ObjectManager extends HTMLElement {
                   class="${object.class}"
                   number-tc="${object.numberTc}"
                   tuition="${object.tuition}">
-              </object-container>`
+              </object-register>`
         }).join("");
     }
   }

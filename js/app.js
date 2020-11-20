@@ -9,18 +9,21 @@ import "./StudentProfile.js";
 
 import "../JS-Object/ObjectContainer.js";
 import "../JS-Object/ObjectList.js"
-import { deleteUser } from "./utils.js";
+import { deleteUser } from "./utils.js"; 
 
-document.getElementById("title3").addEventListener("click",function(){
-    router.navigate("/student-profile");
-})
-document.getElementById("title5").addEventListener("click",function(){
-    router.navigate("/sign-in");
-})
-document.getElementById("title4").addEventListener("click",function(){
-    // deleteUser();
-    router.navigate("/sign-up");
-})
-document.getElementById("title2").addEventListener("click",function(){
-    router.navigate("/object-list");
-})
+import "../JS-Object/ObjectRegister.js"
+import "../JS-Object/ObjectManager.js"
+
+// document.getElementById("title3").addEventListener("click",function(){
+//     router.navigate("/student-profile");
+// })
+// document.getElementById("title5").addEventListener("click",function(){
+//     router.navigate("/sign-in");
+// })
+// document.getElementById("title4").addEventListener("click",function(){
+//     // deleteUser();
+//     router.navigate("/sign-up");
+// })
+// document.getElementById("title2").addEventListener("click",function(){
+//     router.navigate("/object-list");
+// })
