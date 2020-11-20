@@ -1,14 +1,8 @@
-const $template = this.document.getElementById("object-manager-template")
+const $template = document.getElementById("object-manager-template")
 
 export class ObjectManager extends HTMLElement {
     id = "";
-    nameManager = "";  
-    // objectId = "";
-    objectName = "";
-    teacherName = "";
-    class = "";
-    numberTc = "";
-    tuition = "";
+    Objects = [];
 
     constructor() {
       super();
@@ -23,30 +17,31 @@ export class ObjectManager extends HTMLElement {
       return ["id","name-manager"];
     }
     attributeChangedCallback(name, oldValue, newValue) {
-      console.log("test");
+      // console.log("test");
       if(name == 'id') {
           this.id = newValue;
-          console.log(this.id);
+          // console.log(this.id);
       } else if(name="name-manager"){
           this.nameManager = newValue;
       }
       this.render();
     }
   
-    setObjectManager(objectManagerContent) {
-        console.log(objectManagerContent);
-      this.objectManagerContent = objectManagerContent;
-    //   console.log(this.objects);
+    setObjects(Objects) {
+      this.Objects = Objects;
+      // console.log(this.Objects);
       this.render();
     }
     render() {
-      console.log(this.id);
-      this.$nameManager.innerHTML = "Danh sach hoc phan" + this.id;
-      console.log(this.objects);
-      this.$objects.innerHTML = this.map(function(object) {
+      // console.log(this.id);
+      this.$nameManager.innerHTML = "Danh sách học phần được đăng ký trong kỳ I ";
+      // console.log(this.objects);
+      let number = 0;
+      this.$objectManagerContent.innerHTML = this.Objects.map(function(object) {
+        number++;
           return `
               <object-container 
-                  number="${object.number}"
+                  number="${number}"
                   object-id="${object.objectId}"
                   object-name="${object.objectName}"
                   teacher-name="${object.teacherName}"

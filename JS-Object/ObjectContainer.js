@@ -29,7 +29,7 @@ export class ObjectContainer extends HTMLElement {
     }
 
     attributeChangedCallback(name,oldvalue,newValue){
-        console.log("aahihi");
+        // console.log("aahihi");
             switch (name) {
                 case 'number':
                     this.number = newValue;
@@ -64,7 +64,7 @@ export class ObjectContainer extends HTMLElement {
         }
 
         render(){
-            console.log("lala");
+            // console.log("lala");
             this.$number.innerHTML = this.number;
             this.$objectId.innerHTML = this.objectId;
             this.$objectName.innerHTML = this.objectName;

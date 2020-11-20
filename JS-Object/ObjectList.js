@@ -10,7 +10,7 @@ export class ObjectList extends HTMLElement {
     this.shadowRoot.append($template.content.cloneNode(true));
 
     this.$objects = this.shadowRoot.getElementById("objects");
-    this.$name = this,this.shadowRoot.getElementById("name");
+    this.$name = this.shadowRoot.getElementById("name");
   }
 
   static get observedAttributes() {
@@ -27,6 +27,7 @@ export class ObjectList extends HTMLElement {
     this.render();
   }
 
+  
   setObjects(objects) {
     this.objects = objects;
     console.log(this.objects);
