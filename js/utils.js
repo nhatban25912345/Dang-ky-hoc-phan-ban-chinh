@@ -15,12 +15,18 @@ export function validateInputWrapper(inputWrapper, condition, message) {
 
 
 export function getDataFromDoc(doc, excepts = []) {
-    let data = doc.data();
-    data.id = doc.id;
-    for (let except of excepts) {
-        delete data[except];
+    let data = doc.data(); // data: object
+    data.id = doc.id; // thêm thuộc tính id
+    for(let except of excepts) {
+        delete data[except]; // xóa thuộc tính 
     }
     return data;
+}
+
+export function getDataFromDocs(docs, excepts = []) {
+    return docs.map(function(doc) {
+        return getDataFromDoc(doc, excepts);
+    });
 }
 
 export function saveCurrentUser(userData) {

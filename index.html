@@ -64,11 +64,11 @@
 
 <body>
     <div id="container">
-        <div class="head">
-            <!-- Navbar  -->
+        <!-- <div class="head">
+            Navbar 
             <navbar>
                 <div class="navbar-container">
-                    <!-- <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt=""> -->
+                    <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt="">
                     <div id="title1">Đăng ký học phần</div>
                     <div id="title2">Thông tin học phần</div>
                     <div id="title3">Thông tin sinh viên</div>
@@ -78,22 +78,22 @@
             </navbar>
         </div>
         <div id="app">
-            <!-- <form-login></form-login> -->
+            <form-login></form-login>
         </div>
         <div class="footer">
-            <!-- <img id="imageFooter" src="./Image/banner_left.png" alt=""> -->
-        </div>
-    </div>
+            <img id="imageFooter" src="./Image/banner_left.png" alt="">
+        </div> -->
+    </div> 
 
     <div id="app">
-        <!-- <object-list></object-list> -->
         <!-- <form-login></form-login> -->
+        
     </div>
 
 </body>
 
 <!-- Template -->
-<object-list-template></object-list-template>
+<!-- <object-list-template></object-list-template> -->
 <!-- object  -->
 <template id="object-container-template">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -147,26 +147,50 @@
     </div>
 </template>
 
+<template id="object-register-template">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <link rel="stylesheet" href=".">
+    
+    <form class="form-register-object">
+        <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0 0 0 2%; padding:0 ;">
+            <tbody>
+                <tr>
+                    <td width="5%" id="number">1</td>
+                    <td width="10%" id="object-id">Java</td>
+                    <td width="20%" id="object-name">14.21%</td>
+                    <td width="20%" id="teacher-name">14.21%</td>
+                    <td width="10%" id="class">14.21%</td>
+                    <td width="10%" id="number-tc">14.21%</td>
+                    <td id="tuition">12345</td>
+                    <td><button id="btn-register">Đăng ký</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</template>
+
 <template id="object-manager-template">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href=".">
 
     <div class="object-list-container">
-        <h1>Thông tin học phần</h1>
-        <h2 id="name-manager"></h2>
+        <!-- <h1>Thông tin học phần</h1> -->
+        <h1 id="name-manager"></h1>
 
-        <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0; padding:0 ;">
+        <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0 0 0 2%; padding:0 ;">
             <thead class="bg-primary">
                 <tr>
                     <th width="5%">STT</th>
                     <th width="10%">Mã Học Phần</th>
                     <th width="20%">Tên Học Phần</th>
                     <th width="20%">Tên Giảng Viên</th>
-                    <th width="20%">Lớp Học Phần</th>
+                    <th width="10%">Lớp Học Phần</th>
                     <th width="10%">Số TC</th>
                     <th>Học Phí(VND)</th>
-                    <!-- <th>Đăng ký</th> -->
+                    <th>Đăng ký</th>
                 </tr>
             </thead>
         </table>
@@ -245,22 +269,22 @@
 </template>
 <template id="template-form-register">
     <form class="form-register">
-        <h2>Đăng kí tài khoản</h2>
-        <input-wrapper id="student-id" label="Mã sinh viên" type="text" error="" value=""></input-wrapper>
-        <input-wrapper id="full-name" label="Họ và tên" type="text" error="" value=""></input-wrapper>
-        <input-wrapper id="date-of-birth" label="Ngày sinh:" type="text" error="" value=""></input-wrapper>
-        <input-wrapper id="email" label="Email" type="email" error="" value=""></input-wrapper>
-        <input-wrapper id="majors" label="Ngành học:" type="text" error="" value=""></input-wrapper>
-        <input-wrapper id="course" label="Khóa học:" type="text" error="" value=""></input-wrapper>
-        <input-wrapper id="number-phone" label="Số điện thoại:" type="text" error="" value=""></input-wrapper>
-        <input-wrapper id="password" label="Mật khẩu" type="password" error="" value=""></input-wrapper>
-        <input-wrapper id="password-confirmation" label="Xác thực mật khẩu" type="password" error="" value="">
-        </input-wrapper>
-        <button>Đăng kí</button>
+        <link rel="stylesheet" href="./css/register.css">
+        <h2>Tạo tài khoản cho SV</h2>
+        <input-wrapper id="student-id" label="Mã sinh viên" type="text" error="" value=""placeholder="mã sinh viên"></input-wrapper>
+        <input-wrapper id="full-name" label="Họ và tên" type="text" error="" value="" placeholder="họ và tên"></input-wrapper>
+        <input-wrapper id="date-of-birth" label="Ngày sinh:" type="text" error="" value="" placeholder="ngày sinh"></input-wrapper>
+        <input-wrapper id="sex" label="Giới tính:" type="text" error="" value="" placeholder="giới tính"></input-wrapper>
+        <input-wrapper id="majors" label="Ngành học:" type="text" error="" value="" placeholder="ngành học"></input-wrapper>
+        <input-wrapper id="course" label="Khóa học:" type="text" error="" value="" placeholder="khóa học"></input-wrapper>
+        <input-wrapper id="email" label="Email" type="email" error="" value="" placeholder="email"></input-wrapper>
+        <input-wrapper id="number-phone" label="Số điện thoại:" type="text" error="" value="" placeholder="số điện thoại"></input-wrapper>
+        <input-wrapper id="password" label="Mật khẩu" type="password" error="" value="" placeholder="Mật khẩu"></input-wrapper>
+        <input-wrapper id="password-confirmation" label="Xác thực mật khẩu" type="password" error="" value=""placeholder="Xác thực mật khẩu"></input-wrapper>
+        <button id="register-btn">Đăng kí</button>
         <!-- <a href="#/sign-in" id="login-link"></a> -->
     </form>
 </template>
-
 
 <!-- Script -->
 <!-- bootstrap -->
@@ -276,5 +300,4 @@
 <!-- from file -->
 <script src="./JS/Navbar.js"></script>
 <script src="./JS/app.js" type="module"></script>
-
 </html>
