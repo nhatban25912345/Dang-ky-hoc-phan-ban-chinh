@@ -55,7 +55,7 @@
     <!-- Css  -->
 
     <link rel="stylesheet" href="./CSS/Main.css">
-    <link rel="stylesheet" href="./CSS/Navbar.css">
+    <!-- <link rel="stylesheet" href="./CSS/Navbar.css"> -->
 
 
 </head>
@@ -64,30 +64,40 @@
 
 <body>
     <div id="container">
-        <!-- <div class="head">
-            Navbar 
-            <navbar>
-                <div class="navbar-container">
-                    <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt="">
-                    <div id="title1">Đăng ký học phần</div>
-                    <div id="title2">Thông tin học phần</div>
-                    <div id="title3">Thông tin sinh viên</div>
-                    <div id="title4">Đăng ký</div>
-                    <div id="title5">Đăng nhập</div>
-                </div>
-            </navbar>
+        <div class="head">
+            <!-- Navbar -->
+            <main-navbar title1="Đăng ký học phần" title2="Thông tin học phần" title3="Thông tin tài khoản">
+            </main-navbar>
+            <button id="btn-login">Đăng nhập</button>
+            <button id="admin-register">Đăng xuất</button>
+
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate" method="post">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <img src="./Image/img_avatar2.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                        <form-login></form-login>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
         </div>
         <div id="app">
-            <form-login></form-login>
+            <img style="width: 100%" src="./Image/screenshot_1605811525.png" alt="">
         </div>
         <div class="footer">
             <img id="imageFooter" src="./Image/banner_left.png" alt="">
-        </div> -->
-    </div> 
-
-    <div id="app">
-        <!-- <form-login></form-login> -->
-        
+        </div>
     </div>
 
 </body>
@@ -200,6 +210,19 @@
 </template>
 
 <!-- navbar -->
+<template id="main-navbar">
+    <link rel="stylesheet" href="./CSS/Navbar.css">
+    <div class="navbar-container">
+        <!-- <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt=""> -->
+        <div id="title">
+            <div id="title1">title1</div>
+            <div id="title2">title2</div>
+            <div id="title3">title3</div>
+        </div>
+
+
+    </div>
+</template>
 <!-- <template id="main-navbar">
     <div class="navbar-container">
         <img id="logo" src="https://th.bing.com/th/id/OIP.UvPmeXXOx8sum2VNytWzeAHaJr?pid=Api&rs=1" alt="">
@@ -235,6 +258,19 @@
     </div>
 </template>
 <!-- login -->
+<template id="form-login-admin-template">
+    <form class="form-login-admin">
+        <link rel="stylesheet" href="./css/login.css">
+        <div id="main-login-admin">
+            <input-wrapper id="admin-id" label="Username" type="text" placeholder="Nhập tên đăng nhập">
+            </input-wrapper>
+            <input-wrapper id="password" label='Mật khẩu' type="password" placeholder="Nhập mật khẩu">
+            </input-wrapper>
+        </div>
+        <button id="login-btn">đăng nhập</button>
+
+    </form>
+</template>
 <template id="template-input-wrapper">
     <link rel="stylesheet" href="./css/inputWrapper.css">
     <div class="input-wrapper">

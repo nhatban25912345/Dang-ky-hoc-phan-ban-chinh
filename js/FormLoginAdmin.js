@@ -1,24 +1,24 @@
 import { validateInputWrapper, getDataFromDoc, saveCurrentUser } from "./utils.js";
-const $template = document.getElementById("form-login-template");
+const $template = document.getElementById("form-login-admin-template");
 
-class FormLogin extends HTMLElement {
+class FormLoginAdmin extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild($template.content.cloneNode(true));
 
-        this.$formLogin = this.shadowRoot.querySelector('.form-login');
-        this.$studentId = this.shadowRoot.querySelector('#student-id');
+        this.$formLoginAdmin = this.shadowRoot.querySelector('.form-login-admin');
+        this.$adminId = this.shadowRoot.querySelector('#admin-id');
         this.$password = this.shadowRoot.querySelector('#password');
         this.$loginBtn = this.shadowRoot.getElementById("login-btn");
 
-        this.$formLogin.onsubmit = (event) => {
+        this.$formLoginAdmin.onsubmit = (event) => {
             event.preventDefault();
             this.handle();
         }
     }
     async handle() {
-        let studentId = this.$studentId.value;
+        let adminId = this.$adminId.value;
         let password = this.$password.value;
         // let $enterLogin = this.shadowRoot.querySelector("")
         // $formLogin.addEventListener("keyup",function(e){
@@ -27,7 +27,7 @@ class FormLogin extends HTMLElement {
         //     }
         // })
 
-        $('#login-btn').keypress(function(e) {
+        $('#login-btn').keypress(function (e) {
             if (e.which == 13) {
                 click();
                 e.preventDefault();
@@ -38,28 +38,28 @@ class FormLogin extends HTMLElement {
 
             let result = await firebase
                 .firestore()
-                .collection('users')
-                .where('studentId', '==', studentId)
+                .collection('Admin')
+                .where('adminId', '==', adminId)
                 .where('password', '==', password)
                 .get();
 
             if (result.empty) {
-                alert("msv hoặc mk không chính xác");
+                alert("TK hoặc MK không chính xác");
             } else {
                 alert("Đăng nhập thành công");
                 saveCurrentUser(getDataFromDoc(result.docs[0], ['password']));
                 // chuyển trang
-                router.navigate('/student-profile');
-                document.getElementById('id01').style.display = 'none';
+                router.navigate('/sign-up');
+                document.getElementById('id02').style.display = 'none'
             }
         }
     }
     validate() {
 
-        return validateInputWrapper(this.$studentId, (value) => value != "", "Nhập vào MSV")
+        return validateInputWrapper(this.$adminId, (value) => value != "", "Nhập vào TK")
             & validateInputWrapper(this.$password, (value) => value != "", "Nhập vào password");
 
     }
 }
 
-window.customElements.define("form-login", FormLogin);
+window.customElements.define("form-login-admin", FormLoginAdmin);

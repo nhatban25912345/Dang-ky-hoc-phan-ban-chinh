@@ -41,8 +41,8 @@ class FormRegister extends HTMLElement {
 
 
         // check dữ liệu
-        if (this.validate(studentId, email, majors, dateOfBirth, numberPhone, fullName, sex, password, passwordConfirmation)) {
-            alert('đăng kí thành công');
+        // if (this.validate(studentId, email, majors, dateOfBirth, numberPhone, fullName, sex, password, passwordConfirmation)) {
+            // alert('đăng kí thành công');
 
             // let email = this.$email.value;
             // let name = this.$name.value;
@@ -51,29 +51,29 @@ class FormRegister extends HTMLElement {
 
             // console.log(email, name, password, passwordConfirmation);
 
-            if (this.validate(studentId, email, majors, dateOfBirth, numberPhone, fullName, sex, password, passwordConfirmation)) {
-                let result = await firebase
-                    .firestore()
-                    .collection('users')
-                    .where('studentId', '==', studentId)
-                    .get();
-                // console.log(result);
-                if (result.empty) {
-                    await firebase.firestore().collection('users').add({
-                        studentId: studentId,
-                        majors: majors,
-                        course: course,
-                        dateOfBirth: dateOfBirth,
-                        numberPhone: numberPhone,
-                        fullName: fullName,
-                        email: email,
-                        password: password,
-                        sex: sex,
-                    });
-                    alert('bạn đã đăng kí thành công')
-                } else {
-                    alert('email này đã được đăng ký!');
-                }
+    if (this.validate(studentId, email, majors, course, dateOfBirth, numberPhone, fullName, sex, password, passwordConfirmation)) {
+        let result = await firebase
+            .firestore()
+            .collection('users')
+            .where('studentId', '==', studentId)
+            .get();
+        // console.log(result);
+        if (result.empty) {
+            await firebase.firestore().collection('users').add({
+                studentId: studentId,
+                majors: majors,
+                course: course,
+                dateOfBirth: dateOfBirth,
+                numberPhone: numberPhone,
+                fullName: fullName,
+                email: email,
+                password: password,
+                sex: sex,
+            });
+            alert('bạn đã đăng kí thành công')
+        } else {
+            alert('email này đã được đăng ký!');
+        }
 
                 // firebase.firestore().collection('users').add({
                 //     name: name,
@@ -82,7 +82,7 @@ class FormRegister extends HTMLElement {
                 // })
             }
 
-        }
+        // }
     }
 
 

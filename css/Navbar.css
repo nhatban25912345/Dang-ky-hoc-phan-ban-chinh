@@ -1,15 +1,20 @@
 .navbar-container{
     display: flex;
-    width: 100vw;
+    flex-direction: row;
+    width: auto;
     height: 70px;
-    background-color: rgb(224, 45, 45);
+    background-color: rgb(105, 91, 235);
     /* position: fixed; */
     /* opacity: 0; */
 }
 
+#title{
+    display: flex;
+    width: 70vw;
+}
 #title1{
-    margin-left: 7%;
-    width: 15%;
+    margin-left: 10%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +25,7 @@
 }
 #title2{
 
-    width: 15%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,11 +33,10 @@
     font-size: 20px;
     font-weight: 700;
     color: white;
-
 }
 #title3{
 
-    width: 15%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +47,7 @@
 
 }
 
-#title4{
+/* #title4{
     
     position: absolute;
     width: 10%;
@@ -71,10 +75,10 @@
     font-size: 20px;
     font-weight: 600;
     margin-left: 80%;
-    /* right: 10%; */
+    
     color: white;
 
-}   
+}    */
 #title1:hover{
     border-bottom: 5px solid rgb(126, 1, 88);
     font-size: 21px;
