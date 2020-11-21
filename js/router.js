@@ -21,6 +21,11 @@ router
     $app.innerHTML = `<form-login></form-login>`;
   })
   .resolve();
+router.on("/Home",function(){
+    $app.innerHTML = "";
+    $app.innerHTML="wellcome to my web";
+})
+
 
 router.on("/student-profile", async function () {
   let currentUser = getCurrentUser();

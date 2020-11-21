@@ -13,6 +13,11 @@
 }
 #imformation-container{
     margin: 0 0 0 80px;
+    margin: 0 0 0 80px;
+    /* display: inline; */
+    position: relative;
+    width: 500px;
+    height: auto;
 }
 h1{
     width: 90% ;
@@ -20,4 +25,3 @@ h1{
     background-color:rgb(51, 124, 153);
     /* color: white; */
 }
-

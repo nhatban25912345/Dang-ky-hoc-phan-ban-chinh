@@ -13,6 +13,9 @@ export class StudentProfile extends HTMLElement {
     this.$majors = this.shadowRoot.getElementById("majors");
     this.$course = this.shadowRoot.getElementById("course");
     this.$avatar = this.shadowRoot.getElementById("avatar");
+    this.$sex = this.shadowRoot.getElementById('sex');
+    this.$email = this.shadowRoot.getElementById('email');
+    this.$numberPhone = this.shadowRoot.getElementById('number-phone');
   }
 
 
@@ -23,7 +26,10 @@ export class StudentProfile extends HTMLElement {
     this.$dateOfBirth.setAttribute("value", studentProfileData.dateOfBirth);
     this.$majors.setAttribute("value", studentProfileData.majors);
     this.$course.setAttribute("value", studentProfileData.course);
-    this.$avatar.setAttribute("src",studentProfileData.avatar);
+    this.$avatar.setAttribute("src", studentProfileData.avatar);
+    this.$sex.setAttribute("value", studentProfileData.sex);
+    this.$email.setAttribute("value", studentProfileData.email);
+    this.$numberPhone.setAttribute("value", studentProfileData.numberPhone);
   }
 }
 

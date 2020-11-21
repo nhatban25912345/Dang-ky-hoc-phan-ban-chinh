@@ -55,7 +55,7 @@
     <!-- Css  -->
 
     <link rel="stylesheet" href="./CSS/Main.css">
-    <!-- <link rel="stylesheet" href="./CSS/Navbar.css"> -->
+    <link rel="stylesheet" href="./CSS/Navbar.css">
 
 
 </head>
@@ -66,8 +66,14 @@
     <div id="container">
         <div class="head">
             <!-- Navbar -->
-            <main-navbar title1="Đăng ký học phần" title2="Thông tin học phần" title3="Thông tin tài khoản">
-            </main-navbar>
+            <!-- <link rel="stylesheet" href="./CSS/Navbar.css"> -->
+            <div class="navbar-container">
+                <div id="title">
+                    <div id="title1">Đăng ký học phần</div>
+                    <div id="title2">Thông tin học phần</div>
+                    <div id="title3">Hồ sơ sinh viên</div>
+                </div>
+            </div>
             <button id="btn-login">Đăng nhập</button>
             <button id="admin-register">Đăng xuất</button>
 
@@ -132,7 +138,7 @@
     <link rel="stylesheet" href=".">
 
     <div class="object-list-container">
-        <h1>Thông tin học phần</h1>
+        <h1>Thông tin những học phần đã đăng ký</h1>
         <h2 id="name"></h2>
 
         <table class="table table-bordered table-hover" style="width: 95%; table-layout: fixed; margin: 0 0 0 2%; padding:0 ;">
@@ -184,9 +190,9 @@
 <template id="object-manager-template">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href=".">
+    <link rel="stylesheet" href="./css/ObjectManager.css">
 
-    <div class="object-list-container">
+    <div class="object-list-container" style="">
         <!-- <h1>Thông tin học phần</h1> -->
         <h1 id="name-manager"></h1>
 
@@ -243,8 +249,13 @@
             <input-wrapper-student id="student-id" label="Mã sinh viên:" value="12345678"></input-wrapper-student>
             <input-wrapper-student id="full-name" label="Họ và tên:" value="Nguyễn Văn A"></input-wrapper-student>
             <input-wrapper-student id="date-of-birth" label="Ngày sinh:" value="01/01/2001"></input-wrapper-student>
-            <input-wrapper-student id="majors" label="Ngành học:" value="Công Nghệ thông tin"></input-wrapper-student>
+            <input-wrapper-student id="majors" label="Ngành học:" value="Công Nghệ thông tin">
+            </input-wrapper-student>
             <input-wrapper-student id="course" label="Khóa học:" value="K24"></input-wrapper-student>
+            <input-wrapper-student id="sex" label="Giới tính" value=""></input-wrapper-student>
+            <input-wrapper-student id="email" label="Email" value=""></input-wrapper-student>
+            <input-wrapper-student id="number-phone" label="Số điện thoại:" value="">
+            </input-wrapper-student>
             <!-- <inputwrapper-student id="day-register" label="Ngày đăng ký:" value="2/1/2020"></inputwrapper-student> -->
 
         </div>
@@ -275,7 +286,7 @@
     <link rel="stylesheet" href="./css/inputWrapper.css">
     <div class="input-wrapper">
         <label for="" id="input-label"></label>
-        <input type="text" id="input-main" placeholder="abc">
+        <input type="text" id="input-main" placeholder="">
         <div id="input-error"></div>
     </div>
 </template>

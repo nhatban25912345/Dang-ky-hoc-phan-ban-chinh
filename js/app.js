@@ -17,19 +17,25 @@ import { deleteUser } from "./utils.js";
 // import {seed} from "../data/fake.js";
 // seed();
 
-// document.getElementById("title3").addEventListener("click",function(){
-//     router.navigate("/student-profile");
-// })
-// document.getElementById("title5").addEventListener("click",function(){
-//     router.navigate("/sign-in");
-// })
-// document.getElementById("title4").addEventListener("click",function(){
-//     // deleteUser();
-//     router.navigate("/sign-up");
-// })
-// document.getElementById("title2").addEventListener("click",function(){
-//     router.navigate("/object-list");
-// })
+document.getElementById("title3").addEventListener("click",function(){
+    router.navigate("/student-profile");
+})
+document.getElementById("title1").addEventListener("click",function(){
+    router.navigate("/object-manager");
+})
+document.getElementById("admin-register").addEventListener("click",function(){
+    deleteUser();
+    alert("Bạn đã đăng xuất thành công!!");
+    alert("Mời bạn tải lại trang")
+    router.navigate("/home");
+
+})
+document.getElementById("title2").addEventListener("click",function(){
+    router.navigate("/object-list");
+})
+
+
+// login
 let modal01 = document.getElementById('id01');
 var modalLogin = document.getElementById('btn-login');
 modalLogin.onclick = function () {

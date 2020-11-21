@@ -27,7 +27,7 @@ class FormLogin extends HTMLElement {
         //     }
         // })
 
-        $('#login-btn').keypress(function(e) {
+        $('#login-btn').keypress(function (e) {
             if (e.which == 13) {
                 click();
                 e.preventDefault();
@@ -51,6 +51,7 @@ class FormLogin extends HTMLElement {
                 // chuyển trang
                 router.navigate('/student-profile');
                 document.getElementById('id01').style.display = 'none';
+                document.getElementById("btn-login").style.display = "none";
             }
         }
     }

@@ -13,7 +13,7 @@ class InputWrapper extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['label', 'type', 'error', 'value', ""];
+        return ['label', 'type', 'error', 'value', "placeholder"];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -25,6 +25,8 @@ class InputWrapper extends HTMLElement {
             this.$error.innerHTML = newValue;
         } else if (name == 'value') {
             this.$input.value = newValue;
+        } else if (name == 'placeholder') {
+            this.$input.placeholder = newValue;
         }
     }
 

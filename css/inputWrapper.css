@@ -6,12 +6,21 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 5px;
+    color: slategray;
+    overflow: hidden;
   }
 
   label{
       font-weight: bold;
       margin: 20%;
+      font-size: 18px;
   }
+
+  input:focus{
+    outline: none; 
+    border-color: #9ecaed; 
+    box-shadow: 0 0 10px #9ecaed;
+}
 
   
   /* #loginbox {
@@ -28,4 +37,23 @@ input[type=text], input[type=password] {
     color: red;
     font-size: small;
     margin: 0 20%;
+}
+
+.input-wrapper-x{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    width: 100%;
+    float: left;
+}
+#information-child{
+    padding: 5px;
+    padding-left: 20px;
+    margin: 0 23%;
+    outline: none;
+    border: 1px solid #9ecaed;
+    border-radius: 3px;
+    background-color: oldlace;
+
 }
